@@ -11,4 +11,4 @@ categories = ["external-ffi-bindings"]
 
 
 [build-dependencies]
-bindgen = "0.57.0"
+bindgen = "0.70.1"
