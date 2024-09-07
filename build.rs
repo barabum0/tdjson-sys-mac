@@ -20,7 +20,8 @@ fn main() {
         // The input header we would like to generate
         // bindings for.
         .header("wrapper.h")
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+        .clang_arg("-I/usr/local/include")
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
